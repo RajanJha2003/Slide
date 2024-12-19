@@ -16,6 +16,7 @@ import { LogoSmall } from '@/svgs/logo-small'
 import Search from './search'
 import { Notifications } from './notifications'
 import MainBreadCrumb from '../bread-crumbs/main-bread-crumb'
+import CreateAutomation from '../create-automation'
 
 type Props = {
   slug: string
@@ -70,7 +71,7 @@ const InfoBar = ({ slug }: Props) => {
             </Sheet>
           </span>
           <Search />
-          {/* <CreateAutomation /> */}
+          <CreateAutomation />
           <Notifications />
         </div>
         <MainBreadCrumb
