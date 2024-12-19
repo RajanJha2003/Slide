@@ -6,6 +6,7 @@ import React from 'react'
 import Items from './items';
 import { Separator } from '@/components/ui/separator';
 import ClerkAuthState from '../clerk-auth-state';
+import { HelpDuoToneWhite } from '@/icons';
 
 type Props={
     slug:string
@@ -61,6 +62,11 @@ const Sidebar = ({slug}:Props) => {
             <div className="flex gap-x-2">
             <ClerkAuthState />
             <p className="text-[#9B9CA0]">Profile</p>
+                </div>
+                <div className="flex gap-x-3">
+                <HelpDuoToneWhite />
+                <p className="text-[#9B9CA0]">Help</p>
+
                 </div>
                 </div>
         </div>
