@@ -1,6 +1,7 @@
 import { PencilDuoToneBlack } from '@/icons'
 import { ChevronRight } from 'lucide-react'
 import React from 'react'
+import ActivateAutomationButton from '../../activate-automation-button'
 
 type Props={
     id:string
@@ -30,6 +31,7 @@ const AutomationsBreadCrumb = ({id}:Props) => {
             </div>
 
         </div>
+        <ActivateAutomationButton id={id} />
 
     </div>
   )
