@@ -72,7 +72,7 @@ export default function Home() {
               
               <div className="flex items-center gap-4">
                 <Button variant="ghost" className="text-blue-100 hover:text-white hover:bg-blue-800/50">
-                  Sign In
+                <Link href="/dashboard">Login</Link>
                 </Button>
                 <Button className="bg-blue-500 text-white hover:bg-blue-600">
                   Start Free
