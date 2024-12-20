@@ -26,7 +26,8 @@ const layout = async({children,params}:Props) => {
 
  
   return (
-    <div className="p-3">
+    <HydrationBoundary state={dehydrate(query)} >
+      <div className="p-3">
     <Sidebar slug={params.slug} />
     <div
       className="
@@ -42,6 +43,7 @@ const layout = async({children,params}:Props) => {
       {children}
     </div>
   </div>
+    </HydrationBoundary>
   )
 }
 

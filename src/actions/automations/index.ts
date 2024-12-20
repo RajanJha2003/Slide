@@ -2,7 +2,7 @@
 "use server";
 
 import { onCurrentUser } from "../user";
-import { findAutomation, getAutomations } from "./queries";
+import { createAutomation, findAutomation, getAutomations } from "./queries";
 
 export const getAllAutomations=async()=>{
 
@@ -26,6 +26,19 @@ export const getAllAutomations=async()=>{
     }
 
 }
+
+export const createAutomations = async (id?: string) => {
+    const user = await onCurrentUser()
+    try {
+      const create = await createAutomation(user.id, id)
+      if (create) return { status: 200, data: 'Automation created', res: create }
+  
+      return { status: 404, data: 'Oops! something went wrong' }
+    } catch (error) {
+      return { status: 500, data: 'Internal server error' }
+    }
+  }
+  
 
 
 export const getAutomationInfo = async (id: string) => {

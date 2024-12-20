@@ -6,9 +6,22 @@ import Link from 'next/link';
 import React from 'react'
 import GradientButton from '../gradient-button';
 import { Button } from '@/components/ui/button';
+import { useQueryAutomations } from '@/hooks/user-queries';
+import CreateAutomation from '../create-automation';
 
 const AutomationList = () => {
     const {pathname}=usePaths();
+    const {data}=useQueryAutomations();
+
+    if (data?.status !== 200 || data.data.length <= 0) {
+      return (
+        <div className="h-[70vh] flex justify-center items-center flex-col gap-y-3">
+          <h3 className="text-lg text-gray-400">No Automations </h3>
+          <CreateAutomation />
+        </div>
+      )
+    }
+
   return (
     <div className='flex flex-col gap-y-3'>
         <Link href={`${pathname}/121245546`} className='bg-[#1D1D1D] 
