@@ -1,13 +1,24 @@
 import InfoBar from '@/components/global/infobar'
 import Sidebar from '@/components/global/sidebar'
 import React from 'react'
+import {
+  dehydrate,
+  HydrationBoundary,
+  QueryClient,
+} from '@tanstack/react-query'
 
 type Props = {
     children: React.ReactNode
     params: { slug: string }
   }
 
-const layout = ({children,params}:Props) => {
+const layout = async({children,params}:Props) => {
+ const query=new QueryClient();
+
+ 
+
+
+ 
   return (
     <div className="p-3">
     <Sidebar slug={params.slug} />

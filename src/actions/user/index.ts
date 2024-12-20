@@ -74,6 +74,18 @@ export const onBoardUser=async()=>{
         return { status: 500 }
         
     }
+
+
+
+
+   
+}
+
+export const onUserInfo=async()=>{
+
+    
+
+        
 }
 
 
