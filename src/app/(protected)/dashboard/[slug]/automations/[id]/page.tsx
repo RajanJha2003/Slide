@@ -1,3 +1,6 @@
+import PostNode from '@/components/global/automations/post/node'
+import ThenNode from '@/components/global/automations/then/node'
+import Trigger from '@/components/global/automations/trigger'
 import AutomationsBreadCrumb from '@/components/global/bread-crumbs/automations'
 import { Warning } from '@/icons'
 import React from 'react'
@@ -19,7 +22,10 @@ const page = ({params}:Props) => {
                 When...
 
             </div>
+            <Trigger id={params.id} />
         </div>
+        <ThenNode id={params.id} />
+        <PostNode id={params.id} />
     </div>
   )
 }
