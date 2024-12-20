@@ -6,6 +6,7 @@ import {
   HydrationBoundary,
   QueryClient,
 } from '@tanstack/react-query'
+import { PrefetchUserAutnomations, PrefetchUserProfile } from '@/react-query/prefetch'
 
 type Props = {
     children: React.ReactNode
@@ -15,7 +16,12 @@ type Props = {
 const layout = async({children,params}:Props) => {
  const query=new QueryClient();
 
- 
+
+ await PrefetchUserProfile(query);
+
+ await PrefetchUserAutnomations(query);
+
+
 
 
  
