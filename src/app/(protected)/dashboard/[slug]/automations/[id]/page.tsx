@@ -1,3 +1,4 @@
+
 import PostNode from '@/components/global/automations/post/node'
 import ThenNode from '@/components/global/automations/then/node/node'
 import Trigger from '@/components/global/automations/trigger'
