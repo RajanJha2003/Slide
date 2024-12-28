@@ -12,6 +12,8 @@ import CreateAutomation from '../create-automation';
 const AutomationList = () => {
     const {pathname}=usePaths();
     const {data}=useQueryAutomations();
+ 
+
 
     if (data?.status !== 200 || data.data.length <= 0) {
       return (
