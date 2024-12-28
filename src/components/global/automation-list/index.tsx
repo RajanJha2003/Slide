@@ -54,7 +54,8 @@ flex border-[#545454]
                   automation.keywords.length>0 ?(
                     <div className="flex gap-x-2 flex-wrap mt-3">
                 
-                    <div
+                    
+                        <div 
                      
                       className={cn(
                         'rounded-full px-4 py-1 capitalize',
@@ -68,8 +69,10 @@ flex border-[#545454]
                           'bg-keyword-red/15 border-2 border-keyword-red'
                       )}
                     >
-                      hngh
+                      mvmf
+                     
                     </div>
+                      
                  
               </div>
                   ):(
