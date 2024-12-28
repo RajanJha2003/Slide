@@ -10,6 +10,13 @@ import { v4 } from 'uuid'
 type Props = {}
 
 const CreateAutomation = (props: Props) => {
+
+  const mutationId=useMemo(()=>v4(),[]);
+  console.log(mutationId);
+
+  
+
+
  
 
   return (
