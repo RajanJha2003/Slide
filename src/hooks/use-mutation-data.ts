@@ -22,6 +22,9 @@ export const useMutationData=(mutationKey:MutationKey,mutationFn:MutationFunctio
             await client.invalidateQueries({queryKey:queryKey})
         }
     })
+
+
+    return {isPending,mutate}
     
 
 }
